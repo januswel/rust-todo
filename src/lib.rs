@@ -1,12 +1,19 @@
 pub mod todo {
-    pub struct Todo<'a> {
-        pub name: &'a str,
-        pub is_done: bool,
+    pub struct Todo {
+        name: String,
+        is_done: bool,
     }
 
-    impl<'a> Todo<'a> {
-        pub fn get_name(&self) -> &'a str {
-            self.name
+    impl Todo {
+        pub fn new(name_: &str) -> Todo {
+            Todo {
+                name: name_.to_string(),
+                is_done: false,
+            }
+        }
+
+        pub fn get_name(&self) -> &String {
+            &self.name
         }
         pub fn is_done(&self) -> bool {
             self.is_done
