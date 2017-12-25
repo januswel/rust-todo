@@ -1,0 +1,6 @@
+[package]
+name = "todo"
+version = "0.1.0"
+authors = ["janus_wel <janus.wel.3@gmail.com>"]
+
+[dependencies]
